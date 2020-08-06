@@ -13,11 +13,12 @@ public class Jenga {
     }
 
     public void moving(){
-        int res;
-        for(int i = 0; i < list.size(); i++){
-            res = list.get(8);
-            list.add(list.size(),list.get(8));
-            list.remove(res);
+        int reserv;
+        for(int i = 0; i < list.size() - 2; i++){
+            reserv = list.get(2);
+            list.remove(2);
+            list.add(list.size(),reserv);
+            System.out.println(list);
         }
     }
 

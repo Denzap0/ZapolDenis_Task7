@@ -17,6 +17,7 @@ public class DropOutQueue {
             System.out.print(people.peekFirst() + " ");
             people.removeFirst();
         }
+        System.out.println();
     }
 
     public ArrayDeque<Integer> getPeople() {

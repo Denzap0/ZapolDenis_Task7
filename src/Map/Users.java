@@ -15,16 +15,20 @@ public class Users {
     public void registration(String name, long password){
         if(!users.containsKey(name)){
             users.put(name, password);
-            System.out.println("You has registered");
+            System.out.println("You has registered with nick " + name);
         }
         else{
-            System.out.println("User with this name already done");
+            System.out.println("User with nick " + name + " already registered");
         }
     }
 
     public void deleteUser(String name){
         if(users.containsKey(name)){
             users.remove(name);
+            System.out.println("User with nick " + name + " removed");
+        }
+        else{
+            System.out.println("There is no user with mick " + name + " to remove");
         }
     }
 

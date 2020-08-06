@@ -1,9 +1,9 @@
 package Classes;
 
-public class Student implements Comparable<String>{
+public class Student implements Comparable<String> {
 
-    private String name;
-    private int mark, age;
+    protected String name;
+    protected int mark, age;
 
     public Student() {
         this.name = "Vasya";
@@ -17,12 +17,37 @@ public class Student implements Comparable<String>{
         this.age = age;
     }
 
-    @Override
-    public int compareTo(String o) {
-        if(this.name.length() < o.length()){
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMark() {
+        return mark;
+    }
+
+    public void setMark(int mark) {
+        this.mark = mark;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+
+    public int compareTo(String name) {
+        if (this.name.length() < name.length()) {
             return -1;
         }
-        if(this. name.length() > o.length()){
+        if (this.name.length() > name.length()) {
             return 1;
         }
         return 0;

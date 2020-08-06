@@ -12,7 +12,6 @@ public class HospitalQueue {
         }
     }
 
-
     public void queueMove() {
         for (int i = 0; i < 15; i++) {
             if ((i + 1) % 3 == 0) {

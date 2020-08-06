@@ -8,12 +8,14 @@ import java.util.SortedSet;
 
 public class BankCardsSet {
 
-    HashSet<CreditCard> clients = new HashSet<>();
+    HashSet<CreditCard> clients;
 
     public BankCardsSet(){
-        for(int i = 0; i < 100; i++){
-            clients.add(new CreditCard());
-        }
+        clients = new HashSet<>();
+    }
+
+    public void addClient( String owner, long id){
+        clients.add(new CreditCard(owner, id));
     }
 
     public HashSet<CreditCard> getClients() {

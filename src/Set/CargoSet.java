@@ -6,13 +6,13 @@ import java.util.TreeSet;
 
 public class CargoSet {
 
-    private final static int maxWeight = 1000;
+    private final static int maxWeight = 1500;
     private final static Random rand = new Random(100);
     private TreeSet<Integer> cargoSet = new TreeSet<>();
 
     public CargoSet(){
         for(int i = 0; i < 15; i++){
-            cargoSet.add((int)(Math.random() * 150.0));
+            cargoSet.add(i + 100);
         }
     }
 
@@ -24,8 +24,13 @@ public class CargoSet {
         }
         if(sumWeight > maxWeight){
             System.out.println("Your weight is higher then max weight");
-            System.out.println(cargoSet.higher(sumWeight - maxWeight) + " removed");
-            cargoSet.remove(cargoSet.higher(sumWeight - maxWeight));
+            if(cargoSet.higher(sumWeight - maxWeight) == null){
+                System.out.println("But there is no element to remove");
+            }
+            else {
+                System.out.println(cargoSet.higher(sumWeight - maxWeight) + " removed");
+                cargoSet.remove(cargoSet.higher(sumWeight - maxWeight));
+            }
         }
         else {
             System.out.println("Your weight is good");

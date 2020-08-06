@@ -2,11 +2,11 @@ package List;
 
 import java.util.ArrayList;
 
-public class List {
+public class ListOfElements {
 
     private ArrayList<Integer> list = new ArrayList<>();
 
-    public List() {
+    public ListOfElements() {
         for (int i = 0; i < 20; i++) {
             if (i % 2 == 0) {
                 list.add(0, i + 1);
@@ -14,6 +14,7 @@ public class List {
                 list.add(list.size() - 1, i + 1);
             }
         }
+        System.out.println(list);
     }
 
     public void remove() {
